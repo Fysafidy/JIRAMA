@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background: #f4f6f8;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* CONTENEUR PRINCIPAL - 3 COLONNES */
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+/* BLOCS */
+.box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* HISTORIQUE À GAUCHE */
+.historique {
+    width: 30%;
+    overflow-y: auto;
+}
+
+/* CALCUL AU MILIEU */
+.calcul {
+    width: 40%;
+}
+
+/* RÉSULTAT À DROITE */
+.resultat-box {
+    width: 30%;
+    overflow-y: auto;
+}
+
+/* FORMULAIRE */
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background: #2c7be5;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1a5dcc;
+}
+
+button.reset {
+    background: #e74c3c;
+}
+
+button.reset:hover {
+    background: #c0392b;
+}
+
+button.save-old {
+    background: #27ae60;
+    margin-bottom: 10px;
+}
+
+button.save-old:hover {
+    background: #229954;
+}
+
+/* RESULTAT */
+#resultat {
+    background: #eef4ff;
+    padding: 15px;
+    border-radius: 5px;
+    min-height: 200px;
+}
+
+#resultat h3 {
+    margin-top: 0;
+    color: #2c7be5;
+}
+
+#resultat hr {
+    border: none;
+    border-top: 2px solid #ddd;
+    margin: 15px 0;
+}
+
+/* TABLE HISTORIQUE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background: #2c7be5;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+/* Bouton supprimer dans le tableau */
+.btn-supprimer {
+    background: #e74c3c !important;
+    color: white !important;
+    border: none !important;
+    padding: 5px 10px !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    font-size: 14px !important;
+    margin: 0 !important;
+    width: auto !important;
+    display: inline-block !important;
+}
+
+.btn-supprimer:hover {
+    background: #c0392b !important;
+}
+
+/* RESPONSIVE (mobile et tablette) */
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .historique,
+    .calcul,
+    .resultat-box {
+        width: 100%;
+    }
+}

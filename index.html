@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Répartition Électricité & Eau</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- PWA Meta tags -->
+    <meta name="description" content="Application de répartition équitable des consommations d'électricité et d'eau">
+    <meta name="theme-color" content="#2c7be5">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon-192.png">
+</head>
+<body>
+
+    <h1>Répartition équitable des consommations</h1>
+
+    <div class="container">
+
+        <!-- HISTORIQUE (GAUCHE) -->
+        <div class="box historique">
+            <div id="historique"></div>
+        </div>
+
+        <!-- CALCUL (MILIEU) -->
+        <div class="box calcul">
+
+            <h2>Relevé des compteurs</h2>
+
+            <label>Compteur général C1 (ancien)</label>
+            <input type="number" id="c1_old">
+
+            <label>Compteur général C1 (actuel)</label>
+            <input type="number" id="c1_new">
+
+            <label>Sous-compteur C1' (ancien)</label>
+            <input type="number" id="c1p_old">
+
+            <label>Sous-compteur C1' (actuel)</label>
+            <input type="number" id="c1p_new">
+
+            <button class="save-old" onclick="sauvegarderAnciensIndex()">Sauvegarder les index anciens</button>
+
+            <label>Montant total de la facture (Ar)</label>
+            <input type="number" id="facture">
+
+            <button onclick="calculer()">Calculer</button>
+            <button class="reset" onclick="reinitialiser()">Réinitialiser</button>
+
+        </div>
+
+        <!-- RÉSULTAT (DROITE) -->
+        <div class="box resultat-box">
+            <div id="resultat">
+                <p style="color: #999; text-align: center; padding-top: 50px;">Les résultats s'afficheront ici après le calcul</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
