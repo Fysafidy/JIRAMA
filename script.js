@@ -3,6 +3,17 @@
  *************************************************/
 window.onload = function () {
 
+    // Enregistrement du Service Worker pour PWA
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./service-worker.js')
+            .then(registration => {
+                console.log('Service Worker enregistré:', registration);
+            })
+            .catch(error => {
+                console.log('Erreur Service Worker:', error);
+            });
+    }
+
     // Charger anciens index
     const oldC1 = localStorage.getItem("c1_old");
     const oldC1p = localStorage.getItem("c1p_old");
