@@ -2,7 +2,7 @@
   "name": "Répartition Électricité & Eau",
   "short_name": "Répartition",
   "description": "Application de répartition équitable des consommations d'électricité et d'eau",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#f4f6f8",
   "theme_color": "#2c7be5",
