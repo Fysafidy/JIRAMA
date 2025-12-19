@@ -172,10 +172,10 @@ function afficherHistorique(historique) {
         <h3>Historique des relevés</h3>
         <table border="1" cellpadding="5">
             <tr>
-                <th>Mois</th>
-                <th>Maison C1'</th>
-                <th>Maison C2</th>
-                <th>Action</th>
+                <th>Mois de facture</th>
+                <th>Maison principale</th>
+                <th>Maison Secondaire</th>
+                <th>supprimer</th>
             </tr>
     `;
 
@@ -183,8 +183,8 @@ function afficherHistorique(historique) {
         html += `
             <tr>
                 <td>${r.date}</td>
-                <td>${r.montantC1p} Ar</td>
                 <td>${r.montantC2} Ar</td>
+                <td>${r.montantC1p} Ar</td>
                 <td><button type="button" class="btn-supprimer" onclick="supprimerHistorique(${index}); return false;">🗑️</button></td>
             </tr>
         `;
@@ -232,3 +232,4 @@ function reinitialiser() {
 
     document.getElementById("resultat").innerHTML = "";
 }
+
