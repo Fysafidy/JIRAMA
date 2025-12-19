@@ -131,14 +131,14 @@ function calculer() {
     document.getElementById("resultat").innerHTML = `
         <h3>Résultat du calcul</h3>
 
-        <p><strong>Maison C1'</strong></p>
+        <p><strong>Maison secondaire</strong></p>
         <p>Consommation : ${consoC1p} kWh</p>
         <p>Part : ${pctC1p.toFixed(2)} %</p>
         <p>Montant : ${montantC1p.toFixed(0)} Ar</p>
 
         <hr>
 
-        <p><strong>Maison C2</strong></p>
+        <p><strong>Maison principale</strong></p>
         <p>Consommation : ${consoC2} kWh</p>
         <p>Part : ${pctC2.toFixed(2)} %</p>
         <p>Montant : ${montantC2.toFixed(0)} Ar</p>
@@ -232,4 +232,5 @@ function reinitialiser() {
 
     document.getElementById("resultat").innerHTML = "";
 }
+
 
